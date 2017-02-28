@@ -1,0 +1,7 @@
+# testSynchronized
+ synchronized 和java.util.concurrent.locks.Lock的异同
+
+Lock是Java 5以后引入的新的API，和关键字synchronized相比主要相同点：
+Lock能完成synchronized所实现的所有功能；
+主要不同点：Lock有比synchronized更精确的线程语义和更好的性能，而且不强制性的要求一定要获得锁。synchronized会自动释放锁，而Lock一定要求程序员手工释放，并且最好在finally
+块中释放（这是释放外部资源的最好的地方）。
